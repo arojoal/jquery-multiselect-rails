@@ -1,24 +1,30 @@
 # Jquery::Multiselect::Rails
 
-TODO: Write a gem description
+jQuery Multiselect wrapped as a Rails 3 gem. This gem is a Rails engine and is configured to integrate with Rails asset pipeline.
+
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'jquery-multiselect-rails'
+    gem 'jquery-multiselect-rails', :git => 'git://github.com/arojoal/jquery-multiselect-rails.git'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+## Add to your assets
 
-    $ gem install jquery-multiselect-rails
+application.js
 
-## Usage
+	//= require jquery.multiselect
+	//= require jquery.multiselect.filter
 
-TODO: Write usage instructions here
+application.css
+
+	*= require jquery.multiselect
+	*= require jquery.multiselect.filter
+
 
 ## Contributing
 
