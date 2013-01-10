@@ -7,6 +7,8 @@ From https://github.com/ehynds/jquery-ui-multiselect-widget
 
 Add this line to your application's Gemfile:
 
+	gem 'jquery-rails'
+	gem 'jquery-ui-rails'
     gem 'jquery-multiselect-rails', :git => 'git://github.com/arojoal/jquery-multiselect-rails.git'
 
 And then execute:
@@ -22,8 +24,15 @@ application.js
 
 application.css
 
+	*= require jquery.ui.core
+ 	*= require jquery.ui.theme
 	*= require jquery.multiselect
 	*= require jquery.multiselect.filter
+
+layout/application.html.erb
+
+  <%= javascript_include_tag "jquery.multiselect." + I18n.locale.to_s %>
+  <%= javascript_include_tag "jquery.multiselect.filter." + I18n.locale.to_s %>
 
 
 ## Contributing
