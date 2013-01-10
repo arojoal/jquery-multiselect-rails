@@ -34,6 +34,11 @@ layout/application.html.erb
   <%= javascript_include_tag "jquery.multiselect." + I18n.locale.to_s %>
   <%= javascript_include_tag "jquery.multiselect.filter." + I18n.locale.to_s %>
 
+config/environments/production
+
+  config.assets.precompile += %w( jquery.multiselect*.js )
+  config.assets.precompile += %w( jquery.multiselect*.css )
+
 
 ## Contributing
 
