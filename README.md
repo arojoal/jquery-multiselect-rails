@@ -1,7 +1,7 @@
 # Jquery::Multiselect::Rails
 
 jQuery Multiselect wrapped as a Rails 3 gem. This gem is a Rails engine and is configured to integrate with Rails asset pipeline.
-
+From https://github.com/ehynds/jquery-ui-multiselect-widget
 
 ## Installation
 
