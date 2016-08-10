@@ -12,7 +12,7 @@
 .ui-multiselect-header li.ui-multiselect-close { float:right; text-align:right; padding-right:0 }
 
 .ui-multiselect-menu { display:none; padding:3px; position:absolute; z-index:10000; text-align: left }
-.ui-multiselect-checkboxes { position:relative /* fixes bug in IE6/7 */; overflow-y:auto }
+.ui-multiselect-checkboxes { position:relative /* fixes bug in IE6/7 */; overflow-y:scroll }
 .ui-multiselect-checkboxes label { cursor:default; display:block; border:1px solid transparent; padding:3px 1px }
 .ui-multiselect-checkboxes label input { position:relative; top:1px }
 .ui-multiselect-checkboxes li { clear:both; font-size:0.9em; padding-right:3px }
@@ -21,3 +21,61 @@
 
 /* remove label borders in IE6 because IE6 does not support transparency */
 * html .ui-multiselect-checkboxes label { border:none }
+
+/* Custom UI widget overrides */
+.ui-multiselect-menu {
+  border-radius: 0;
+  padding: 0;
+  border-top: none;
+  margin-top: -1px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  -moz-box-shadow   : 0 1px 3px rgba(0,0,0,.15);
+  box-shadow        : 0 1px 3px rgba(0,0,0,.15);
+}
+.ui-multiselect-menu .ui-state-hover {
+  background: none;
+  border: 1px solid transparent;
+}
+.ui-multiselect-menu .ui-multiselect-header {
+  border-radius: 0;
+  font-weight: normal;
+  font-size: 90%;
+  border: none;
+  padding: 3px;
+  background-color: #fff;
+  background-image: none;
+}
+.ui-multiselect-header ul li  {
+
+}
+button.ui-multiselect {
+  font-size: 11px;
+  padding-left: 8px;
+  padding-top: 4px;
+  background-color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0 );
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
+  background-image: -webkit-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background-image: -o-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background-image: linear-gradient(#ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  -moz-box-shadow   : 0 1px 3px rgba(0,0,0,.15);
+  box-shadow        : 0 1px 3px rgba(0,0,0,.15);
+}
+button.ui-state-active {
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
+
+}
+.ui-multiselect-menu .ui-multiselect-header label.ui-state-hover {
+  border: none;
+}
+.ui-multiselect-filter {
+  float: none;
+}
+.ui-multiselect-filter input {
+  width: 100%;
+  margin: 0 0 0 2px;
+  border-color: #aaa;
+}
